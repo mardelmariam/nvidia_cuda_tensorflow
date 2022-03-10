@@ -42,17 +42,18 @@ Select and download the desired version numbers from [CUDA Toolkit Archive](http
 
 For CUDA Toolkit:
 
-Choose your operating system as Windows. 
-Next, choose its version (If not sure, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
-After that, choose any installer type. When you start installation, you are prompted to select one of two installation options. Choose the "Express" one.
+* Choose your operating system as Windows. 
+* Next, choose its version (If not sure, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
+* After that, choose any installer type. 
+* When you start installation, you are prompted to select one of two installation options. Choose the "Express" one.
 
 If the installation stops because you have a more recent Nvidia SDK installer, you might install a more recent CUDA Toolkit version.
 
 For cuDNN:
 
-Click on the version you will download, and select "cuDNN Library for Windows (x86)".
-
-Copy and paste cuDNN extraction files on this directory: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6
+* Click on the version you will download
+* Select "cuDNN Library for Windows (x86)".
+* Copy and paste cuDNN extraction files on this directory: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6
 
 
 ## 6. Set environment variables
@@ -112,7 +113,7 @@ Finish pywin32 installation with:
 python [environment path]/Scripts/pywin32_postinstall.py -install
 ```
 
-Your environment path should be at C:/users/[windows user]/.conda/envs/tf-gpu/.
+Your environment path should be C:/users/[windows user]/.conda/envs/tf-gpu/.
 
 If the installation is successful, there's a message saying "The pywin32 extensions were successfully installed.". Close the command window.
 
