@@ -1,9 +1,9 @@
 # nvidia_cuda_tensorflow
 How to use your Nvidia GPU on Windows 10 with Tensorflow, for deep learning
 
-## 1. Check that your GPU is capable of processing deep learning data
+## 1. Check that your GPU is capable of using CUDA
 
-
+If you have an Nvidia GPU that is listed on [Nvidia CUDA support matrix](https://developer.nvidia.com/cuda-gpus), then your GPU is capable of running CUDA applications.
 
 ## 2. Install Visual Studio with Nvidia integrations
 
@@ -12,7 +12,7 @@ Download and install:
 * Microsoft Visual Studio 2017 Community Edition
 * Microsoft Visual Studio 2019 Community Edition
 
-From [My Visual Studio Portal](https://my.visualstudio.com/Downloads)
+From [My Visual Studio Portal](https://my.visualstudio.com/Downloads).
 
 For both versions, you need to install two components:
 
@@ -28,15 +28,11 @@ Fron Visual Studio's main menu, select:
 
 Expand Online, and search for "Nsight integration". Nvidia Nsight Integration should be available for update or download and install.
 
+
 ## 4. Check the most recent Tensorflow version you may use with your GPU
 
-Visit [Tensorflow's table of tested versions](https://www.tensorflow.org/install/source#gpu). The version you choose points the Python, CUDA and cuDNN versions you should install.
+Check [Tensorflow's table of tested versions](https://www.tensorflow.org/install/source#gpu). The version you choose points the Python, CUDA and cuDNN versions you should install.
 
-For example, if you choose Tensorflow 2.6.0, versions for the other programs are:
-
-* Python: 3.6-3.9
-* CUDA: 11.2
-* cuDNN: 8.1
 
 ## 5. Download CUDA Toolkit and cudDNN
 
