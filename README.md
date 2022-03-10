@@ -57,7 +57,7 @@ Create CUDNN. It should point to these folders:
 Replace the "X" with the version number you installed.
 
 
-## 7. Sanity check: Detected Nvidia GPU by CUDA applications
+## 7. Sanity check: Detect Nvidia GPU
 
 
 ## ?. Bugs and solutions
