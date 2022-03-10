@@ -142,4 +142,10 @@ Your GPU is shown as:
 [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
 ```
 
+Finish with:
+
+```
+exit()
+```
+
 Yay! now you may use your GPU for deep learning projects.
