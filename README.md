@@ -38,7 +38,8 @@ Check [Tensorflow's table of tested versions](https://www.tensorflow.org/install
 
 Select and download the desired version numbers from [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive) and [cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive)
 
-Choose your operating system as Windows. Next, choose its version (to know your system's architecture, go to Control Panel | System and Security | System. It will be mentioned as its system type). Next, choose any installer type. When you start installation, you are prompted for select one of two installation options. Choose the "Express" one.
+Choose your operating system as Windows. Next, choose its version (to know your system's architecture, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
+After that, choose any installer type. When you start installation, you are prompted for select one of two installation options. Choose the "Express" one.
 
 Install CUDA Toolkit. After finishing, copy and paste cuDNN extraction files 
 
