@@ -36,29 +36,44 @@ Check [Tensorflow's table of tested versions](https://www.tensorflow.org/install
 
 ## 5. Download CUDA Toolkit and cudDNN
 
+Create an [Nvidia developer account](https://developer.nvidia.com/) if you don't have one.
+
 Select and download the desired version numbers from [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive) and [cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive)
+
+For CUDA Toolkit:
 
 Choose your operating system as Windows. Next, choose its version (to know your system's architecture, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
 After that, choose any installer type. When you start installation, you are prompted for select one of two installation options. Choose the "Express" one.
 
-Install CUDA Toolkit. After finishing, copy and paste cuDNN extraction files 
+For cuDNN:
+
+Click on the version you will download, and select "cuDNN Library for Windows (x86)".
+
+Install CUDA Toolkit. Copy and paste cuDNN extraction files on this directory: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6
 
 
 ## 6. Set environment variables
 
-Create CUDA_PATH. It should point to the Nvidia CUDA installation directory (C:\Program Files\NVIDIA GPU Computing Toolkit).
+On Windows, there's [a graphical procedure to view and modify environment variables](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0).
 
-Create CUDNN. It should point to these folders:
+Create CUDA_PATH if it doesn't appear as a system variable. Its value is Nvidia CUDA installation directory (C:\Program Files\NVIDIA GPU Computing Toolkit).
 
-- C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\bin
-- C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\libnvvp
-- C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\extras
-- C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\include
+Create CUDNN as a system variable. its value is:
+
+"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\extras;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.X\include"
 
 Replace the "X" with the version number you installed.
 
 
 ## 7. Sanity check: Detect Nvidia GPU
+
+Open Windows command window with Windows key + R, cmd. Type:
+
+```
+nvcc -V
+```
+
+
 
 
 ## ?. Bugs and solutions
