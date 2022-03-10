@@ -45,18 +45,20 @@ For CUDA Toolkit:
 Choose your operating system as Windows. Next, choose its version (to know your system's architecture, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
 After that, choose any installer type. When you start installation, you are prompted for select one of two installation options. Choose the "Express" one.
 
+If the installation stops because you have a more recent Nvidia SDK installer, you might install a more recent CUDA Toolkit version.
+
 For cuDNN:
 
 Click on the version you will download, and select "cuDNN Library for Windows (x86)".
 
-Install CUDA Toolkit. Copy and paste cuDNN extraction files on this directory: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6
+Copy and paste cuDNN extraction files on this directory: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6
 
 
 ## 6. Set environment variables
 
 On Windows, there's [a graphical procedure to view and modify environment variables](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0).
 
-Create CUDA_PATH if it doesn't appear as a system variable. Its value is Nvidia CUDA installation directory (C:\Program Files\NVIDIA GPU Computing Toolkit).
+Create CUDA_PATH if it isn't there already. Its value is Nvidia CUDA installation directory (C:\Program Files\NVIDIA GPU Computing Toolkit).
 
 Create CUDNN as a system variable. its value is:
 
@@ -73,9 +75,49 @@ Open Windows command window with Windows key + R, cmd. Type:
 nvcc -V
 ```
 
+Your GPU should be on the list. If not, some bugs appear. Many of them are related to cuDNN files.
+
+
+## 8. Install Tensorflow on Anaconda
+
+Install [Anaconda](https://www.anaconda.com/products/individual) or your favorite tool for coding your deep learning projects.
+
+Launch it and click on the Environments tab. Next, click on the arrow button within the base(root) entry. Click on Open Terminal. Type:
+
+```
+conda create -n tf-gpu python=3.9
+```
+
+```
+conda activate tf-gpu
+```
+
+```
+pip3 install tensorflow-gpu==2.6.0
+```
+
+Here, the new environment's name is tf-gpu.
+
+Install these packages too:
+
+```
+pip3 install keras
+```
+
+```
+pip3 install jupyter
+```
+
+```
+pip install pywin32
+```
+
+Finish pywin32 installation with:
+
+```
+python [environment path]/Scripts/pywin32_postinstall.py -install
+```
 
 
 
-## ?. Bugs and solutions
 
-You have a more recent Nvidia SDK installer: Install a more recent CUDA Toolkit version.
