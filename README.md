@@ -34,7 +34,7 @@ Expand Online, and search for "Nsight integration". Nvidia Nsight Integration sh
 Check [Tensorflow's table of tested versions](https://www.tensorflow.org/install/source#gpu). The version you choose points the Python, CUDA and cuDNN versions you should install.
 
 
-## 5. Download CUDA Toolkit and cudDNN
+## 5. Install CUDA Toolkit and cudDNN
 
 Create an [Nvidia developer account](https://developer.nvidia.com/) if you don't have one.
 
@@ -67,7 +67,7 @@ Create CUDNN as a system variable. its value is:
 Replace the "X" with the version number you installed.
 
 
-## 7. Sanity check: Detect Nvidia GPU
+## 7. Sanity check: Detect Nvidia GPU for CUDA
 
 Open Windows command window with Windows key + R, cmd. Type:
 
@@ -75,7 +75,7 @@ Open Windows command window with Windows key + R, cmd. Type:
 nvcc -V
 ```
 
-Your GPU should be on the list. If not, some bugs appear. Many of them are related to cuDNN files.
+Your GPU should be on the list. If not, some bugs appear. Maybe they are related to missing cuDNN files.
 
 
 ## 8. Install Tensorflow on Anaconda
@@ -98,19 +98,12 @@ pip3 install tensorflow-gpu==2.6.0
 
 Here, the new environment's name is tf-gpu.
 
-Install these packages too:
-
-```
-pip3 install keras
-```
+Install Jupyter and pywin32:
 
 ```
 pip3 install jupyter
 ```
 
-```
-pip install pywin32
-```
 
 Finish pywin32 installation with:
 
@@ -118,6 +111,33 @@ Finish pywin32 installation with:
 python [environment path]/Scripts/pywin32_postinstall.py -install
 ```
 
+Your environment path should be at C:/users/[windows user]/.conda/envs/tf-gpu/.
+
+If the installation is successful, there's a message saying "The pywin32 extensions were successfully installed.". Close the command window.
 
 
+## 9. Sanity check: Run Tensorflow and detect your GPU
 
+Select tf-gpu as your environment on Anaconda. Open Terminal. Then, type:
+
+```
+python
+```
+
+```
+import tensorflow as tf
+```
+
+Here, there should be no bugs.
+
+```
+print(tf.config.list_physical_devices('GPU'))
+```
+
+Your GPU is shown as:
+
+```
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+```
+
+Yay! now you may use your GPU for deep learning projects.
