@@ -42,8 +42,9 @@ Select and download the desired version numbers from [CUDA Toolkit Archive](http
 
 For CUDA Toolkit:
 
-Choose your operating system as Windows. Next, choose its version (to know your system's architecture, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
-After that, choose any installer type. When you start installation, you are prompted for select one of two installation options. Choose the "Express" one.
+Choose your operating system as Windows. 
+Next, choose its version (If not sure, go to Control Panel | System and Security | System. It will be mentioned as its system type). 
+After that, choose any installer type. When you start installation, you are prompted to select one of two installation options. Choose the "Express" one.
 
 If the installation stops because you have a more recent Nvidia SDK installer, you might install a more recent CUDA Toolkit version.
 
