@@ -82,12 +82,12 @@ Your GPU should be on the list. If not, some bugs appear. Maybe they are related
 
 ## 8. Install Tensorflow on Anaconda
 
-Install [Anaconda](https://www.anaconda.com/products/individual) or your favorite tool for coding your deep learning projects.
+Install [Anaconda](https://www.anaconda.com/products/individual). The rest of this repo shows how to get your GPU working with this tool.
 
-Launch it and click on the Environments tab. Next, click on the arrow button within the base(root) entry. Click on Open Terminal. Type:
+Once you finish the installation process, launch it and click on the Environments tab. Next, click on the arrow button within the base(root) entry. Click on Open Terminal. With Python 3.10 and Tensorflow GPU 2.10.2, these are the commands:
 
 ```
-conda create -n tf-gpu python=3.9
+conda create -n tf-gpu python=3.10
 ```
 
 ```
@@ -95,7 +95,7 @@ conda activate tf-gpu
 ```
 
 ```
-pip3 install tensorflow-gpu==2.6.0
+pip3 install tensorflow-gpu==2.10.2
 ```
 
 Here, the new environment's name is tf-gpu.
@@ -113,7 +113,7 @@ Finish pywin32 installation with:
 python [environment path]/Scripts/pywin32_postinstall.py -install
 ```
 
-Your environment path should be C:/users/[windows user]/.conda/envs/tf-gpu/.
+Your environment path should be C:/users/[windows user]/anaconda3/envs/tf_gpu
 
 If the installation is successful, there's a message saying "The pywin32 extensions were successfully installed.". Close the command window.
 
