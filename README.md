@@ -222,3 +222,71 @@ exit()
 ```
 
 Yay! now you may use your GPU for deep learning projects.
+
+
+If you want to use more complex datasets like COCO or more complex algorithms like YOLO, follow the next steps:
+
+
+## 10. Install Protocol Buffers (protobuf)
+
+Load its [official repository](https://github.com/protocolbuffers/protobuf/releases). Look for a version that is compatible with Windows and Tensorflow.
+
+Add the bin folder from the installation (for example, C:\protoc-21.12-win64\bin) to the PATH system variable.
+
+
+## 11. Compile protos
+
+Download [the Tensorflow models repository](https://github.com/tensorflow/models). Keep it in a good path. Execute the following command line, from the /models/research path:
+
+```
+protoc object_detection/protos/*.proto --python_out=.
+```
+
+
+## 12. Compile the Object Detection API
+
+Execute its installation as:
+
+```
+cd models\research\object_detection\packages\tf2
+```
+
+If you have a relatively new GPU card, you can execute this without any issues:
+
+```
+python -m pip install .
+```
+
+If your GPU card is old, you will need to install the following packages, one by one, verifying that they remain compatible with the Tensorflow version
+
+```
+avro-python3
+apache-beam
+pillow
+lxml
+matplotlib
+cython
+contextlib2
+six
+pycocotools
+scipy
+pandas
+tf-models-official
+tensorflow_io
+keras
+pyparsing
+sacrebleu<=2.2.0
+```
+If your GPU card is very old, don't worry if tf-models-official cannot be installed. You can find its source code and learn from it separately.
+
+## 11. Create a PYTHONPATH environment variale
+
+This variable shoud contain 3 directories: the Python environment in which Tensorflow is located, its Scripts folder, and the models/research folder. It should look like this:
+
+```
+virtual env path \ environment_name ; virtual env path \ environment_name \ Scripts ; Tensorflow models path \ models\ research
+```
+
+Now you're ready for complex computer vision projects. Have fun!
+
+
