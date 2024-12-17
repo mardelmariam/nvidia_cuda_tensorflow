@@ -257,7 +257,7 @@ If you have a relatively new GPU card, you can execute this without any issues:
 python -m pip install .
 ```
 
-If your GPU card is old, you will need to install the following packages, one by one, verifying that they remain compatible with the Tensorflow version
+If your GPU card is old, you will need to install the following packages, one by one, verifying that they remain compatible with the Tensorflow version. Hint: the package versions should have a similar date to the Tensorflow version you installed.
 
 ```
 avro-python3
@@ -275,10 +275,10 @@ tf-models-official
 tensorflow_io
 keras
 pyparsing
-sacrebleu<=2.2.0 (possible issues with newer versions)
+sacrebleu
 ```
 
-If your GPU card is very old, don't worry if tf-models-official cannot be installed. You can find its source code and learn from it [separately](https://pypi.org/project/tf-models-official/2.10.0/#history). The tf-models-official repository has a folder named "official". Copy it and paste in the /models/research/ path. Ensure that you download a version that is compatible with your already installed libraries.
+If your GPU card is very old, don't worry if tf-models-official cannot be installed. You can find its source code and learn from it [separately](https://pypi.org/project/tf-models-official/2.10.0/#history). After extracting content from the .tar.gz file, look for a folder named "official". Copy and paste it in the /models/research/ path. Ensure that you download a version that is compatible with your already installed libraries.
 
 
 ## 11. Create a PYTHONPATH environment variale
