@@ -275,9 +275,11 @@ tf-models-official
 tensorflow_io
 keras
 pyparsing
-sacrebleu<=2.2.0
+sacrebleu<=2.2.0 (possible issues with newer versions)
 ```
-If your GPU card is very old, don't worry if tf-models-official cannot be installed. You can find its source code and learn from it separately.
+
+If your GPU card is very old, don't worry if tf-models-official cannot be installed. You can find its source code and learn from it [separately](https://pypi.org/project/tf-models-official/2.10.0/#history). The tf-models-official repository has a folder named "official". Copy it and paste in the /models/research/ path. Ensure that you download a version that is compatible with your already installed libraries.
+
 
 ## 11. Create a PYTHONPATH environment variale
 
